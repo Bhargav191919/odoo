@@ -1,0 +1,20 @@
+<odoo>
+	<record id="contact_update_wizard_view" model="ir.ui.view">
+            <field name="name">contact.wizard</field>
+            <field name="model">contact.update</field>
+            <field name="arch" type="xml">
+				<form>
+	                	<field name="ref"/>
+	                	<field name="industry"/>
+	                		<footer>
+	                    		<button string="Confirm" name="update" type="object" class="oe_highlight" data-hotkey="q"/>
+	                    		<button string="Cancel" class="btn btn-default" special="cancel" data-hotkey="z"/>
+	                		</footer>
+	                
+               	</form>
+         	</field>
+    </record>
+
+    
+
+</odoo>

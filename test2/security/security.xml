@@ -1,0 +1,23 @@
+<odoo>
+	<data>
+		<record model="ir.module.category" id="update_module">
+                <field name="name">Contact</field>
+                <field name="sequence">0</field>
+                <field name="visible" eval="0" />
+        </record>
+        
+
+        <record id="partner_user" model="res.groups">
+            <field name="name">User</field>
+            <field name="category_id" ref="update_module"/>
+            
+        </record>
+
+        <record id="partner_admin" model="res.groups">
+            <field name="name">Admin</field>
+            <field name="category_id" ref="update_module"/>
+            <field name="implied_ids" eval="[(4, ref('partner_user'))]"/>
+        </record>
+
+	</data>
+</odoo>
